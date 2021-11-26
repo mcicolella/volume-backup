@@ -14,7 +14,7 @@ This avoids mounting a second backup volume and allows to redirect it to a file,
 
 Syntax:
 
-    docker run -v [volume-name]:/volume --rm --log-driver none loomchild/volume-backup backup - > [archive-name]
+    docker run -v [volume-name]:/volume --rm --log-driver none mcicolella/docker-volumes-backup backup - > [archive-name]
 
 For example:
 
