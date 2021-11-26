@@ -128,3 +128,9 @@ For example:
     docker run -v [volume-name]:/volume --rm --log-driver none mcicolella/docker-volumes-backup backup -x --verbose - > [archive-name]
     ```
 1. Volume labels are not backed-up or restored automatically, but they might be required for your application to work (e.g. when using docker-compose). If you need to preserve them, create a label backup file as follows: `docker inspect [volume-name] -f "{{json .Labels}}" > labels.json`. When restoring your data, target volume needs to be created manually with labels before launching the restore script: `docker volume create --label "label1" --label "label2" [volume-name]`.
+
+## CI
+
+GitHub Workflow
+
+- [build-push-action](https://github.com/docker/build-push-action)
